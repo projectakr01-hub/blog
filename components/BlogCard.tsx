@@ -21,10 +21,9 @@ export default function BlogCard({ blog, featured = false }: BlogCardProps) {
     <div className="group flex flex-col bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 transform hover:-translate-y-1">
       {/* Image Header */}
       <Link href={`/blog/${blog.slug}`} className="relative block h-52 sm:h-56 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-        <Image
+        <img
           src={blog.coverImage || "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop"}
           alt={blog.title}
-          fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
         />

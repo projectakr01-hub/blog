@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
 
     await fs.mkdir(UPLOAD_DIR, { recursive: true });
 
-    const filePath = path.join(UPLOAD_DIR, fileName);
+    const filePath = path.join(/*turbopackIgnore: true*/ UPLOAD_DIR, fileName);
     await fs.writeFile(filePath, buffer);
 
     const publicUrl = `/uploads/${fileName}`;
